@@ -12,6 +12,11 @@ import uk.co.drnaylor.quickstart.annotations.ModuleData;
 public class CommandLoggerModule extends ConfigurableModule<CommandLoggerConfigAdapter> {
 
     @Override
+    protected void performPreTasks() throws Exception {
+        super.performPreTasks();
+    }
+
+    @Override
     public CommandLoggerConfigAdapter getAdapter() {
         return new CommandLoggerConfigAdapter();
     }

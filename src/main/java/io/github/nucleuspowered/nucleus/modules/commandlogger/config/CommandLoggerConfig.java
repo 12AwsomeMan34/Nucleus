@@ -22,6 +22,9 @@ public class CommandLoggerConfig {
     @Setting(value = "command-filter", comment = "loc:config.commandlogger.list")
     private List<String> commandsToFilter = new ArrayList<>();
 
+    @Setting(value = "separate-file", comment = "loc:config.commandlogger.separatefile")
+    private boolean separateFile = false;
+
     public LoggerTargetConfig getLoggerTarget() {
         return loggerTarget;
     }
@@ -32,5 +35,9 @@ public class CommandLoggerConfig {
 
     public List<String> getCommandsToFilter() {
         return commandsToFilter;
+    }
+
+    public boolean separateFile() {
+        return separateFile;
     }
 }
